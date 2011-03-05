@@ -1,4 +1,5 @@
-﻿# GGCzat Open
+﻿
+## GGCzat Open
 
 ### Czym jest wersja Open?
 
