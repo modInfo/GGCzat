@@ -1,4 +1,4 @@
-﻿
+
 ## GGCzat Open
 
 ### Czym jest wersja Open?
@@ -12,7 +12,18 @@ Jedynym ograniczeniem są okrojone funkcjonalności.
 * Wchodzenie
 * Wychodzenie
 * Sprawdzanie listy zalogowanych
+* Czat jest klientem projektu GlobalBan - zbanowani spamerzy nie będą Was nękać :)
 * No i oczywiście czatowanie :)
+
+### LICENCJA
+Modyfikacje skryptu na własne potrzeby są dozwolone, można mi także podsyłać poprawki na GitHuba.
+Nie dozwolone jest rozpowszechnianie zmodyfikowanych wersji skryptu.
+Zabronione jest zmienianie komendy /ver, oraz kasowanie informacji o autorze czatu.
+Zakaz ten dotyczy wszystkich możliwych sposobów na wykonanie tej czynności
+Dozwolone jest zmienienie komunikatu wejścia dla użytkownika poprzez zmianę adresu "Nasza WWW",
+zabronione jest jednak modyfikowanie linijki informującej o tym na jakiej platformie stoi czat.
+Dozwolone jest zmienienie komunikatu wyjścia dla użytkownika w całości, nie ma obowiązku zachowania w nim informacji o platformie.
+Dozwolone jest zmienienie wszelkich innych tekstów w pliku Core/teksty.php
 
 ### Wymagania
 
@@ -20,6 +31,14 @@ Jedynym ograniczeniem są okrojone funkcjonalności.
 * GG BotApi wersja 2
 
 Skrypt w wersji Open nie wymaga bazy danych.
+
+### Instalacja
+
+Należy nadać katalogowi Core/db chmod 777 natomiast wszystkim plikom jakie się w nim znajdują chmod 666
+Ponadto plik Core/ver_inf.php jako, że przechowuje dane o sprawdzeniu wersji musi także posiadać chmod 666
+Należy zmienić nazwę pliku Core/config_default.php na Core/config.php i umieścić w nim dane BotApi v2
+
+Adresem na jaki ustawiamy BotApi v2 jest adres pliku ggbot.php
 
 ### Dlaczego Open? 
 
@@ -30,3 +49,5 @@ Nie miałem okazji zaglądać do ich kodu ale pewnie nie jest on jakiś super, d
 ### Plany na przyszłość
 
 Ta wersja nie ma ściśle określonych planów, możliwe, że będą np uprawnienia :)
+
+### UWAGA!! NIE UDZIELAM POMOCY W INSTALACJI SKRYPTU NA GG, PROSZE DO MNIE NIE PISAC W TEJ SPRAWIE
