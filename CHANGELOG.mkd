@@ -1,0 +1,6 @@
+# GGCzat Open - Changelog
+
+Opis zmian w projekcie wraz z kolejnymi wersjami:
+
+#### Wersja 1.0:
+	* Wydanie pierwszej wersji GGCzatu Open
