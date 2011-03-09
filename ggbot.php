@@ -29,7 +29,7 @@ informatyczne lub inne szczególne jej zabezpieczenie, podlega grzywnie, karze o
 Niniejsze wynika z Art. 267 Kodeksu Karnego § 1
 <br /><br />
 A adres tego pliku nie jest informacja dla Ciebie przeznaczona.<br />
-=== Powered by Kubofonista GGCzat (http://ggczat.net) ===');
+=== Powered by Kubofonista GGCzat Open (http://open.ggczat.net) ===');
 }
 
 // Dodatkowe zabezpieczenie
@@ -40,16 +40,18 @@ eval(base64_decode('ZXZhbChiYXNlNjRfZGVjb2RlKCdaWFpoYkNoaVlYTmxOalJmWkdWamIyUmxL
 #### ZABEZPIECZENIE PRZED PRZESLANIEM OBRAZKA ####
 if(strpos($tresc,'--message boundary') !== false OR strpos($tresc,'Content-Type: image/image') !== false OR strpos($tresc,'Content-transfer-encoding: base64') !== false) {
 	die('Wysylanie obrazkow do tego bota jest zablokowane
-	=== Powered by Kubofonista GGCzat (http://ggczat.net) ===');
+	=== Powered by Kubofonista GGCzat Open (http://ggczat.net) ===');
 }
 #### EOF ZABEZPIECZENIE PRZED PRZESLANIEM OBRAZKA ####
 
 #### ZALACZANIE BIBLIOTEK ####
-// Biblioteke z tekstami nalezy zalaczyc pozniej //
 include_once('Core/config.php'); // Główna konfiguracja
 include_once('Core/funkcje_ogolne.php'); // Biblioteka z funkcjami kluczowymi
 include('Core/teksty.php'); // Biblioteka z tekstami zmienialnymi
-include('Core/funkcje_tekstowe.php'); // Biblioteka z funkcjami tekstowymi BotAPI v 1.0
+include('Core/funkcje_tekstowe.php'); // Biblioteka z funkcjami tekstowymi BotAPI v 2.0
+
+if(!file_exists('Core/config.php')) { die('Skrypt niezainstalowany poprawnie. Przeczytaj plik README.mkd'); }
+
 #### EOF ZALACZANIE BIBLIOTEK ####
 
 $ggczat = new GGCzat(); // Ustalamy klase GGCzata
@@ -82,14 +84,8 @@ $czykomenda = $ggczat->CzyKomendaZwykla($tresc); // Dla staffu
 
 #### SPRAWDZAMY CZY UZYTKOWNIK JEST ZALOGOWANY ####
 if($jestzalogowany == false AND (strpos($tresc,'/join') !== 0 AND $tresc != '/ver')){ // I czy nie chce do nas dolaczyc
-	
-	if($onumerze['owner'] != 1) { // Ale owner moze zrobic wszystko zawsze
-		$ggczat_tekst->WiadomoscSystemowa(eval($str_niezal_1),1,0); // Jezeli nie to wyswietlamy komunikat
-	die;
-	} elseif (!$czykomenda AND !$czykomendaownera) {
 		$ggczat_tekst->WiadomoscSystemowa(eval($str_niezal_1),1,0); // Jezeli nie to wyswietlamy komunikat
 		die;
-	}
 }
 #### EOF SPRAWDZAMY CZY UZYTKOWNIK JEST ZALOGOWANY ####
 

@@ -182,7 +182,7 @@ class GGCzat{
 	 */
 	
 	function OznaczNick($nick,$typ){
-		$nick_prawdziwy = $nick; // Nick dla nie obslugi
+		$nick_prawdziwy = $nick; 
 
 		$kn['R'] = 94;
 		$kn['G'] = 94;

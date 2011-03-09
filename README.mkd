@@ -40,6 +40,13 @@ Należy zmienić nazwę pliku Core/config_default.php na Core/config.php i umie�
 
 Adresem na jaki ustawiamy BotApi v2 jest adres pliku ggbot.php
 
+#### Dodawanie własnych komend
+
+Istnieje możliwość dodania własnych komend do czatu. Tworzymy wtedy w katalogu Core/Komendy plik o nazwie komendy z roszerzeniem .php
+Dostęp do parametrów przekazanych komendzie uzyskujemy poprzez prosty kod: $param = explode(' ',$tresc); Pierwszy parametr jest w $param[1]
+Aby zwrócić coś do użytkownika należy posłużyć się kodem: $ggczat_tekst->WiadomoscSystemowa('tresc',1,0);
+Pierwszy parametr liczbowy oznacza, czy treść ma trafić do autora wiadomości, drugi, czy ma trafić do wszystkich zalogowanych. Można łączyć jak się chce.
+
 ### Dlaczego Open? 
 
 Tak, to prawda, że GGCzat jest zamkniętym oprogramowaniem, dlatego decyzja o wydaniu wersji Open może się wydawać dziwna. Skąd się wzięła?
@@ -50,4 +57,4 @@ Nie miałem okazji zaglądać do ich kodu ale pewnie nie jest on jakiś super, d
 
 Ta wersja nie ma ściśle określonych planów, możliwe, że będą np uprawnienia :)
 
-### UWAGA!! NIE UDZIELAM POMOCY W INSTALACJI SKRYPTU NA GG, PROSZE DO MNIE NIE PISAC W TEJ SPRAWIE
+### UWAGA!! NIE UDZIELAM POMOCY W INSTALACJI SKRYPTU NA GG, PROSZE NIE PISAC DO MNIE W TEJ SPRAWIE
